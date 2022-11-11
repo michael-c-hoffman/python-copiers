@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "{{project_name}}"
+version = "0.1.0"
+description = "{{project_description}}"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "{{project_name}}"}]
+
+[tool.poetry.dependencies]
+python = "^{{python_version}}"
+
+[tool.poetry.dev-dependencies]
+black = { version = "*" }
+isort = { version = "*" }
+mypy = { version = "*" }
+pre-commit = { version = "*" }
+poethepoet = { version = "*" }
+pytest-black = { version = "*" }
+pytest-colordots = { version = "*" }
+pytest-cov = { version = "*" }
+pytest-datadir = { version = "*" }
+pytest-depends = { version = "*" }
+pytest-html = { version = "*" }
+pytest-isort = { version = "*" }
+pytest-metadata = { version = "*" }
+pytest-mock = { version = "*" }
+pytest-mypy = { version = "*" }
+pytest-pylint = { version = "*" }
+pytest-sugar = { version = "*" }
+pytest = { version = "*" }
+pytest-xdist = { version = "*" }
+safety = { version = "*" }
+
+[tool.pytest.ini_options]
+addopts = "-vs"
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s %(levelname)s %(filename)s::%(funcName)s::%(lineno)d %(message)s"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+[tool.poe.tasks]
+precommit = "pre-commit run --all-files"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

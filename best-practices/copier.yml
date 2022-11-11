@@ -8,3 +8,6 @@ project_author:
   type: str
 project_author_email: 
   type: str
+python_version:
+  type: str
+  default: "3.10"
