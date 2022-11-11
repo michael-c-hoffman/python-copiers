@@ -9,11 +9,10 @@
 - Git hooks that run all the above with [pre-commit](https://pre-commit.com/)
 - Continuous Integration with [GitHub Actions](https://github.com/features/actions)
 
-# Install dependencies
-``poetry install``
-
-# Setup pre-commit and pre-push hooks
+## poetry commands
 ```
+poetry install -- install initial repo
+poetry update -- update all dependencies
 poetry run pre-commit install -t pre-commit
 poetry run pre-commit install -t pre-push
 ```
