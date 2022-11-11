@@ -1,0 +1,10 @@
+project_name:
+  type: str
+project_module:
+  type: str
+project_description:
+  type: str
+project_author:
+  type: str
+project_author_email: 
+  type: str

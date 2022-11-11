@@ -1,0 +1,19 @@
+# {{ project_name }}
+{{ project_description }}
+
+## Features
+- Testing with [pytest](https://docs.pytest.org/en/latest/)
+- Formatting with [black](https://github.com/psf/black)
+- Import sorting with [isort](https://github.com/timothycrosley/isort)
+- Static typing with [mypy](http://mypy-lang.org/)
+- Git hooks that run all the above with [pre-commit](https://pre-commit.com/)
+- Continuous Integration with [GitHub Actions](https://github.com/features/actions)
+
+# Install dependencies
+``poetry install``
+
+# Setup pre-commit and pre-push hooks
+```
+poetry run pre-commit install -t pre-commit
+poetry run pre-commit install -t pre-push
+```
